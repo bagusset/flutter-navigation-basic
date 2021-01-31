@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
 
-class MainPage extends StatelessWidget {
+class SecondPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Text("Main Page"),
-        ),
+        appBar: AppBar(title: Text("SecondPage"),),
         body: Center(
           child: ElevatedButton(
-            child: Text("Go To Second Page"),
+            child: Text("Back"),
             onPressed: () {
-              Navigator.pushNamed(context, '/secondPage');
+              Navigator.pop(context);
             },
           ),
         ),
